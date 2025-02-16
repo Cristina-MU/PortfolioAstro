@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+body {
+  min-height: 100%;
+  background-image: url('/images/whiteMb.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+  transition: background-image 0.3s ease;
+}
+
+body.dark {
+  background-image: url('/images/blackMb.jpg');
+}
+
+h2{
+  text-align: center;
+}
+.hero {
+  position: relative;
+  background-image: url('/images/whiteHomeMb.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease;
+}
+
+.nav-links {
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links.hidden {
+    transform: translateY(0);
+}
+
+/* Media queries para tablet y desktop */
+@media (min-width: 768px) {
+  body {
+      background-image: url('/images/whitePc.jpeg');
+  }
+
+  body.dark {
+      background-image: url('/images/blackPc.jpg');
+  }
+
+  .hero {
+      background-image: url('/images/whiteHomePc.jpeg');
+  }
+}

@@ -1,0 +1,18 @@
+---
+const { title, image, link, github, githubPages, tags } = Astro.props;
+---
+
+<div class="bg-black/50 rounded-lg shadow-md flex flex-col project-card" data-tags={tags.join(',')}>
+    <img src={image} alt={title} class="rounded-t-lg w-full h-auto object-cover">
+    <div class="p-6 flex flex-col items-center justify-center flex-grow">
+      <h3 class="text-white text-xl font-bold mb-4">{title}</h3>
+      <div class="mt-4 flex gap-4">
+        {github && (
+          <a href={github} target="_blank" rel="noopener noreferrer" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">GitHub</a>
+        )}
+        {githubPages && (
+          <a href={githubPages} target="_blank" rel="noopener noreferrer" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">GitHub Pages</a>
+        )}
+      </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/baseLayout.astro';
+import SkillCard from '../components/skillCards.astro';
+
+import htmlImage from '../../public/images/html5.png';
+import cssImage from '../../public/images/css.png';
+import javascriptImage from '../../public/images/javascript.png';
+import tailwindImage from '../../public/images/tailwind.png';
+import sassImage from '../../public/images/Sass.png';
+import figmaImage from '../../public/images/figma.png';
+import phpImage from '../../public/images/php.png';
+import laravelImage from '../../public/images/laravel.png';
+import mysqlImage from '../../public/images/mysql.png';
+import dockerImage from '../../public/images/docker.png';
+import astroImage from '../../public/images/astro.png';
+import typescriptImage from '../../public/images/typescript.png';
+import gitImage from '../../public/images/git.png';
+import githubImage from '../../public/images/github.png';
+import vscodeImage from '../../public/images/vscode.png';
+---
+
+<BaseLayout>
+    <section class="p-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Skills</h2>
+            <p class="text-lg mb-8 text-center">My tech stack includes:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <SkillCard 
+                    title="Frontend" 
+                    skills={[
+                        { name: "HTML", image: htmlImage }, 
+                        { name: "CSS", image: cssImage }, 
+                        { name: "JavaScript", image: javascriptImage }, 
+                        { name: "tailwind", image: tailwindImage }, 
+                        { name: "sass", image: sassImage }, 
+                        { name: "figma", image: figmaImage }
+                    ]} 
+                />
+                <SkillCard 
+                    title="Backend" 
+                    skills={[
+                        { name: "php", image: phpImage }, 
+                        { name: "laravel", image: laravelImage }, 
+                        { name: "mysql", image: mysqlImage }
+                    ]}  
+                />
+                <SkillCard 
+                    title="Learning" 
+                    skills={[
+                        { name: "docker", image: dockerImage }, 
+                        { name: "astro", image: astroImage }, 
+                        { name: "typescript", image: typescriptImage }
+                    ]}  
+                />
+                <SkillCard 
+                    title="Tools" 
+                    skills={[
+                        { name: "git", image: gitImage }, 
+                        { name: "github", image: githubImage }, 
+                        { name: "vscode", image: vscodeImage }
+                    ]}  
+                />
+            </div>
+        </div>
+    </section>
+</BaseLayout>

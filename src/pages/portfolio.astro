@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/baseLayout.astro';
+import ProjectCard from '../components/projectCard.astro';
+
+const projects = import.meta.glob('../projects/*.md', { eager: true });
+
+const allProjectsData = Object.values(projects).map(project => project.frontmatter);
+---
+
+<BaseLayout>
+    <section class="p-12 justify-center items-center">
+        <div class="container mx-auto justify-center items-center">
+            <h2 class="text-3xl font-bold mb-8">My Projects</h2>
+
+            <div class="mb-8">
+                <label for="tag-filter" class="block text-white font-bold mb-2">Buscar por tag:</label>
+                <input type="text" id="tag-filter" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Ej: HTML, JavaScript">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {allProjectsData.map((project) => (
+                    <ProjectCard
+                        key={project.title}
+                        title={project.title}
+                        image={project.img}
+                        link={`/projects/${project.title.toLowerCase().replace(/ /g, '-')}.md`}
+                        github={project.github}
+                        githubPages={project.githubPages}
+                        tags={project.tags}
+                    />
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tagFilter = document.getElementById('tag-filter');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            if (tagFilter && projectCards.length > 0) {
+                tagFilter.addEventListener('input', (e) => {
+                    const filterText = e.target.value.toLowerCase().trim();
+                    console.log("Filter Text:", filterText);
+
+                    projectCards.forEach(card => {
+                        const cardTags = card.dataset.tags.toLowerCase().split(',').map(tag => tag.trim());
+                        console.log("Card Tags:", cardTags);
+
+                        const match = filterText === "" || cardTags.includes(filterText);
+                        console.log("Match:", match);
+
+                        card.style.display = match ? 'block' : 'none';
+                        console.log("Card Display:", card.style.display);
+                    });
+                });
+            } else {
+                console.warn("No se encontraron los elementos para el filtro de tags.");
+            }
+        });
+    </script>
+</BaseLayout>
