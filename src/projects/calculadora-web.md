@@ -7,7 +7,7 @@ tags:
   - css
   - javascript
 
-github: "https://github.com/Cristina-MU/ValorantDiw" 
+github: "https://github.com/Cristina-MU/Calculadora-JS" 
 githubPages: "https://cristina-mu.github.io/ValorantDiw/" 
 
 ---

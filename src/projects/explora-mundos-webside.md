@@ -8,8 +8,8 @@ tags:
   - css
   - javascript
 
-github: "https://github.com/Cristina-MU/ValorantDiw" 
-githubPages: "https://cristina-mu.github.io/ValorantDiw/" 
+github: "https://github.com/Cristina-MU/Tienda-ExploraMundos/" 
+githubPages: "https://cristina-mu.github.io/Tienda-ExploraMundos/" 
 ---
 
 ## Level-two heading

@@ -15,16 +15,17 @@ main {
 
 body {
   min-height: 100%;
-  background-image: url('/images/whiteMb.jpg');
+  background-image: linear-gradient( to left, #0d6acc, #6f42c1);
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   color: #ffffff;
   transition: background-image 0.3s ease;
 }
 
 body.dark {
-  background-image: url('/images/blackMb.jpg');
+  background-image: linear-gradient(to left, #142130, #4b0082);
+  background-size: cover;
+  color: #ffffff;
+  transition: background-image 0.3s ease;
 }
 
 h2{
@@ -48,14 +49,6 @@ h2{
 
 /* Media queries para tablet y desktop */
 @media (min-width: 768px) {
-  body {
-      background-image: url('/images/whitePc.jpeg');
-  }
-
-  body.dark {
-      background-image: url('/images/blackPc.jpg');
-  }
-
   .hero {
       background-image: url('/images/whiteHomePc.jpeg');
   }

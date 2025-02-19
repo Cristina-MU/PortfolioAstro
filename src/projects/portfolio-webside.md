@@ -8,8 +8,8 @@ tags:
   - css
   - javascript
 
-github: "https://github.com/Cristina-MU/ValorantDiw" 
-githubPages: "https://cristina-mu.github.io/ValorantDiw/" 
+github: "https://github.com/Cristina-MU/Portfolio-Javascript" 
+githubPages: "https://cristina-mu.github.io/Portfolio-Javascript/" 
 
 ---
 

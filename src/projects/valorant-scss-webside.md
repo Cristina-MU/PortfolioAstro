@@ -7,8 +7,8 @@ tags:
   - css
   - scss
 
-github: "https://github.com/Cristina-MU/ValorantDiw" 
-githubPages: "https://cristina-mu.github.io/ValorantDiw/" 
+github: "https://github.com/Cristina-MU/Sass-Valorant" 
+githubPages: "https://cristina-mu.github.io/Sass-Valorant/" 
 
 ---
 
